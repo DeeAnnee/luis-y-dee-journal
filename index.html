@@ -4,76 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luis & Dee – Our Love Story</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: #fff0f5;
-      color: #333;
+      padding: 0;
     }
 
-    .hero {
-      background: linear-gradient(rgba(255,192,203,0.5), rgba(255,240,245,0.9)),
-                  url('https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    body {
       height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #fde2e4, #fff);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 40px 30px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 64px;
-      color: #800f2f;
-      margin: 0;
+      color: #b03060;
+      margin-bottom: 10px;
     }
 
-    p {
+    #welcome-text {
       font-size: 18px;
-      max-width: 600px;
-      margin: 20px auto;
-      color: #5c2c3c;
+      color: #4b2e39;
+      margin: 15px 0 30px;
+      line-height: 1.6;
     }
 
     .btn-group {
-      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
     .btn {
-      display: inline-block;
       padding: 12px 24px;
-      margin: 10px;
-      background-color: #ffcad4;
-      color: #800f2f;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      background-color: #b03060;
+      color: white;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
       transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #f8a8b8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      background-color: #f6d6e0;
-      color: #800f2f;
+      background-color: #8e2c4e;
     }
 
     .language-toggle {
-      text-align: right;
-      padding: 10px 20px;
+      margin-bottom: 20px;
     }
 
     .language-toggle button {
-      padding: 8px 14px;
+      padding: 6px 16px;
       border-radius: 20px;
       background: #ffcad4;
       color: #800f2f;
@@ -81,15 +82,19 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #a65b70;
+    }
   </style>
 </head>
 <body>
-
-  <div class="language-toggle">
-    <button onclick="switchLang()">Español</button>
-  </div>
-
-  <div class="hero">
+  <div class="card">
+    <div class="language-toggle">
+      <button onclick="switchLang()">Español</button>
+    </div>
     <h1>Luis & Dee</h1>
     <p id="welcome-text">
       Welcome to our story — a journey of love, distance, dreams, and devotion. From Barbados to Spain, our hearts have found a rhythm all their own. 💕
@@ -97,14 +102,12 @@
     <div class="btn-group">
       <a href="journal.html" class="btn">Read Our Journal</a>
       <a href="gallery.html" class="btn">Photo Gallery</a>
-      <a href="letters.html" class="btn">Love Letters</a>
       <a href="astro.html" class="btn">Astro & Dreams</a>
     </div>
+    <footer>
+      © 2025 Luis & Dee | Our Forever Love Story
+    </footer>
   </div>
-
-  <footer>
-    © 2025 Luis & Dee | Our Forever Love Story
-  </footer>
 
   <script>
     let isEnglish = true;
@@ -121,7 +124,6 @@
       const labels = [
         { en: "Read Our Journal", es: "Leer Nuestro Diario" },
         { en: "Photo Gallery", es: "Galería de Fotos" },
-        { en: "Love Letters", es: "Cartas de Amor" },
         { en: "Astro & Dreams", es: "Astro y Sueños" }
       ];
 
@@ -130,6 +132,5 @@
       });
     }
   </script>
-
 </body>
 </html>
