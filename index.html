@@ -66,13 +66,34 @@
       background-color: #f6d6e0;
       color: #800f2f;
     }
+
+    .language-toggle {
+      text-align: right;
+      padding: 10px 20px;
+    }
+
+    .language-toggle button {
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: #ffcad4;
+      color: #800f2f;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
+  <div class="language-toggle">
+    <button onclick="switchLang()">Español</button>
+  </div>
+
   <div class="hero">
     <h1>Luis & Dee</h1>
-    <p>Welcome to our story — a journey of love, distance, dreams, and devotion. From Barbados to Spain, our hearts have found a rhythm all their own. 💕</p>
+    <p id="welcome-text">
+      Welcome to our story — a journey of love, distance, dreams, and devotion. From Barbados to Spain, our hearts have found a rhythm all their own. 💕
+    </p>
     <div class="btn-group">
       <a href="journal.html" class="btn">Read Our Journal</a>
       <a href="gallery.html" class="btn">Photo Gallery</a>
@@ -84,6 +105,31 @@
   <footer>
     © 2025 Luis & Dee | Our Forever Love Story
   </footer>
+
+  <script>
+    let isEnglish = true;
+    function switchLang() {
+      isEnglish = !isEnglish;
+
+      document.getElementById("welcome-text").innerHTML = isEnglish
+        ? "Welcome to our story — a journey of love, distance, dreams, and devotion. From Barbados to Spain, our hearts have found a rhythm all their own. 💕"
+        : "Bienvenidos a nuestra historia: un viaje de amor, distancia, sueños y devoción. Desde Barbados hasta España, nuestros corazones encontraron su propio ritmo. 💕";
+
+      document.querySelector(".language-toggle button").innerText = isEnglish ? "Español" : "English";
+
+      const buttons = document.querySelectorAll(".btn");
+      const labels = [
+        { en: "Read Our Journal", es: "Leer Nuestro Diario" },
+        { en: "Photo Gallery", es: "Galería de Fotos" },
+        { en: "Love Letters", es: "Cartas de Amor" },
+        { en: "Astro & Dreams", es: "Astro y Sueños" }
+      ];
+
+      buttons.forEach((btn, i) => {
+        btn.innerText = isEnglish ? labels[i].en : labels[i].es;
+      });
+    }
+  </script>
 
 </body>
 </html>
