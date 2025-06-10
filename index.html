@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Love Story – Luis & Dee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luis & Dee – Our Love Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -12,94 +12,78 @@
       background: #fff0f5;
       color: #333;
     }
-    header {
-      background: #ffcad4;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      margin: 0;
-      color: #800f2f;
-    }
-    nav {
+
+    .hero {
+      background: linear-gradient(rgba(255,192,203,0.5), rgba(255,240,245,0.9)),
+                  url('https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      background: #f8c8dc;
-      padding: 10px 0;
+      text-align: center;
+      padding: 20px;
     }
-    nav a {
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      color: #800f2f;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: #5c2c3c;
+    }
+
+    .btn-group {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      background-color: #ffcad4;
       color: #800f2f;
       text-decoration: none;
-      margin: 0 15px;
+      border-radius: 30px;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+
+    .btn:hover {
+      background-color: #f8a8b8;
     }
-    section h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      color: #b03060;
-    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background: #f6d6e0;
+      padding: 15px;
       font-size: 14px;
+      background-color: #f6d6e0;
+      color: #800f2f;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <div class="hero">
     <h1>Luis & Dee</h1>
-    <p>Our Love Story Across Time & Space</p>
-  </header>
-
-  <nav>
-    <a href="#journal">Journal</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#letters">Love Letters</a>
-    <a href="#astro">Astro & Dreams</a>
-    <a href="#about">About Us</a>
-  </nav>
-
-  <section id="journal">
-    <h2>Our Journal</h2>
-    <p><strong>June 13, 2025:</strong> The countdown begins! Luis is still in Yemen, but we’re dreaming of our reunion. I miss you, my love. – Dee</p>
-    <p><strong>May 25, 2025:</strong> Late-night talks and longing glances. Long-distance is hard, but loving you makes it worth it. 💌</p>
-  </section>
-
-  <section id="gallery">
-    <h2>Photo Memories</h2>
-    <p>Coming soon: all our kisses, cuddles, and adventures in photos 📸</p>
-  </section>
-
-  <section id="letters">
-    <h2>Love Letters</h2>
-    <p>“Thank you for being the place where I feel safe and I can be soft, silly, fiery, wild, and completely myself. I love the growth I see in myself —and I love the way we’re growing, together.”</p>
-  </section>
-
-  <section id="astro">
-    <h2>Astro & Dreams</h2>
-    <p>Our stars aligned. Forecast: romance, passion, purpose. 🌌</p>
-    <ul>
-      <li>Next Reunion: Manifesting June 13–29 🌙</li>
-      <li>Dream: A house near the sea in Spain or Barbados</li>
-    </ul>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p><strong>Luis:</strong> The patient, passionate Spaniard. Loves potatoes, deep conversations, and stargazing.</p>
-    <p><strong>Dee:</strong> The fire-hearted Bajan. Loves journaling, astrology, and making him laugh.</p>
-  </section>
+    <p>Welcome to our story — a journey of love, distance, dreams, and devotion. From Barbados to Spain, our hearts have found a rhythm all their own. 💕</p>
+    <div class="btn-group">
+      <a href="journal.html" class="btn">Read Our Journal</a>
+      <a href="gallery.html" class="btn">Photo Gallery</a>
+      <a href="letters.html" class="btn">Love Letters</a>
+      <a href="astro.html" class="btn">Astro & Dreams</a>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 Luis & Dee – Our Forever Love Story</p>
+    © 2025 Luis & Dee | Our Forever Love Story
   </footer>
+
 </body>
 </html>
